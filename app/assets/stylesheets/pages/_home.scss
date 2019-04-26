@@ -385,7 +385,7 @@ a:focus, a:hover, a:active {
 .btn {
   border-width: 2px;
   text-shadow: 0.5px 0.5px 1px #776e6e;
-  border-color:#ad959540;
+  border-color:white;
 }
 
 .bg-primary {
@@ -438,3 +438,21 @@ a:focus, a:hover, a:active {
   font-size: 1.50rem;
   color:grey;
 }
+
+
+
+.item {
+  box-sizing: border-box;
+  width: 400px;
+  height: 200px;
+  margin: 50px auto;
+  padding-top: 75px;
+  background: #ccc;
+  text-align: center;
+  color: #FFF;
+  font-size: 3em;
+}
+
+
+
+
