@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+
+html, body {
+  height:100%;
+}
+
+
+
+
+@media only screen and (max-device-width: 780px)  {
+
+
+.word:nth-child(1) {
+  font-size: 0.5em;
+}
+.word:nth-child(3n + 2) {
+  font-size: 0.9em;
+}
+.word:nth-child(3n) {
+  font-size: 1.2em;
+}
+}
+
+
+
+span {
+  opacity: 0;
+}
+
+span.show {
+  animation: fade-in 800ms ease 1 forwards;
+}
+
+.word:nth-child(1) {
+  text-transform: uppercase;
+  font-size: 1em;
+}
+.word:nth-child(3n + 2) {
+  text-transform: uppercase;
+  animation:
+    slide-left var(--t1) ease-out 1 forwards,
+    slide-left2 var(--t11) var(--t1) linear 1 forwards;
+  font-size: 2.5em;
+}
+.word:nth-child(3n) {
+  text-transform: uppercase;
+  animation:
+    slide-right var(--t2)  ease-out 1 forwards,
+    slide-right2 var(--t21)  var(--t2)  linear 1 forwards;
+  font-size: 3em;
+}
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(50px);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+@keyframes slide-right2 {
+  from {
+    transform: translateX(-20px);
+  }
+  to {
+    transform: translateX(-40px);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(-50px);
+  }
+  to {
+    transform: translateX(30px);
+  }
+}
+@keyframes slide-left2 {
+  from {
+    transform: translateX(30px);
+  }
+  to {
+    transform: translateX(50px);
+  }
+}
+
+.word { cursor: pointer; }
+.word:hover { color: white; }
